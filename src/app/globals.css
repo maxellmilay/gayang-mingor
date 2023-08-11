@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("./fonts/gothic.css");
+@import url("../fonts/gotham.css");
+@import url("../fonts/bitcheese.css");
+@import url("../styles/shadow.css");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -23,6 +25,10 @@ body {
   background: white;
 }
 
-.font-gothic {
-  font-family: "Gothic", sans-serif;
+.font-gotham {
+  font-family: "Gotham", sans-serif;
+}
+
+.font-bitcheese {
+  font-family: "Bitcheese", sans-serif;
 }
