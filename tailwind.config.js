@@ -12,6 +12,9 @@ module.exports = {
         "mingor-yellow": "#E9C717",
         "mingor-blue": "#14194A",
       },
+      backgroundImage: {
+        footer: "url('/images/footer-bg.png')",
+      },
     },
   },
   plugins: [],
