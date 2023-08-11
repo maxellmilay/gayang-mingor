@@ -1,7 +1,19 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import Dropdown from "./Dropdown";
 
 const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const closeDropdownClick = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="flex px-7 py-4 bg-mingor-blue justify-between backdrop-blur-[10px] header-box-shadow">
       <button className="flex items-center">
@@ -12,7 +24,7 @@ const Header = () => {
           alt="Logo"
           className="hidden md:block"
         />
-        <p className="font-gotham font-bold md:mx-5 text-white">
+        <p className="font-gotham font-bold md:mx-5 text-white text-left">
           GAYANG MINGOR
         </p>
       </button>
@@ -25,14 +37,17 @@ const Header = () => {
         </button>
       </div>
       <div className="flex items-center md:hidden">
-        <Image
-          src="/images/menu-icon.png"
-          width={30}
-          height={30}
-          alt="Menu"
-          className=" h-fit"
-        />
+        <button className="h-fit" onClick={handleDropdownClick}>
+          <Image
+            src="/images/menu-icon.png"
+            width={30}
+            height={30}
+            alt="Menu"
+            className="h-fit"
+          />
+        </button>
       </div>
+      {isDropdownOpen && <Dropdown closeDropdownClick={closeDropdownClick} />}
     </div>
   );
 };
