@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         "mingor-yellow": "#E9C717",
         "mingor-blue": "#14194A",
+        facebook: "#242527",
       },
       backgroundImage: {
         footer: "url('/images/footer-bg.png')",
@@ -18,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
