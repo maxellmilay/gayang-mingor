@@ -1,6 +1,24 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Updated Version of Running Development (HTTPS)
+
+First install mkcert and initialize localhost:
+
+```
+mkcert localhost
+```
+
+Two files will be created in the project directory - `localhost.pem` and `localhost-key.pem`
+
+After the ssl certificate and key are generated, you can now run the project using:
+
+```
+node server.js
+```
+
+This runs the custom server file `server.js` in the root directory that can only be accessed during development
+
+## Getting Started (HTTP)
 
 First, run the development server:
 
