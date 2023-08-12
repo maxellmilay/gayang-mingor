@@ -44,7 +44,7 @@ const HomePage = async () => {
           Our latest posts, all in one place
         </p>
         <div className="flex wrap justify-center md:justify-start">
-          <div className="flex flex-col bg-facebook rounded-lg pt-4 text-white w-56 md:w-80">
+          <div className="flex flex-col bg-facebook rounded-lg pt-4 text-white w-60 md:w-80">
             <div className="flex items-center px-4 mb-3">
               <div className="relative w-[25px] h-[25px] md:w-[30px] md:h-[30px]">
                 <Image
@@ -57,7 +57,7 @@ const HomePage = async () => {
               <p className="text-xs px-3">{pageName}</p>
             </div>
             <p className="text-[0.6rem] md:text-xs px-4 mb-3">{postMessage}</p>
-            <div className="relative w-full h-56 md:h-80">
+            <div className="relative w-full h-60 md:h-80">
               <Image
                 src={`${postImageUrl}`}
                 alt="Post Picture"
