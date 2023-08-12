@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex px-7 py-4 bg-mingor-blue justify-between backdrop-blur-[10px] header-box-shadow">
+    <header className="flex px-7 py-4 bg-mingor-blue justify-between backdrop-blur-[10px] header-box-shadow z-20">
       <button className="flex items-center">
         <Image
           src="/images/gayang-mingor-logo.png"
@@ -48,7 +48,7 @@ const Header = () => {
         </button>
       </div>
       {isDropdownOpen && <Dropdown closeDropdownClick={closeDropdownClick} />}
-    </div>
+    </header>
   );
 };
 
