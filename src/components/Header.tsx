@@ -15,11 +15,7 @@ const Header = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="flex fixed z-10 w-screen px-7 py-4 bg-mingor-blue/40 justify-between backdrop-blur-[10px] header-box-shadow bg-center">
-=======
-    <header className="flex px-7 py-4 bg-mingor-blue justify-between backdrop-blur-[10px] header-box-shadow z-20">
->>>>>>> main
+    <header className="flex fixed z-10 w-screen px-7 py-4 bg-mingor-blue/40 justify-between backdrop-blur-[10px] header-box-shadow bg-center">
       <button className="flex items-center">
         <Image
           src="/images/gayang-mingor-logo.png"
