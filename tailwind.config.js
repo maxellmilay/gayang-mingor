@@ -16,6 +16,7 @@ module.exports = {
       backgroundImage: {
         footer: "url('/images/footer-bg.png')",
         landing: "url('/images/landing-bg.png')",
+        "mobile-landing": "url('/images/mobile-landing-bg.png')",
       },
     },
   },
