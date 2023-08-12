@@ -48,7 +48,7 @@ const HomePage = async () => {
             <div className="flex items-center px-4 mb-3">
               <div className="relative w-[25px] h-[25px] md:w-[30px] md:h-[30px]">
                 <Image
-                  src={`${pageImageUrl}`}
+                  src={pageImageUrl}
                   alt="Page Picture"
                   fill
                   className="object-cover rounded-[50%]"
@@ -59,14 +59,13 @@ const HomePage = async () => {
             <p className="text-[0.6rem] md:text-xs px-4 mb-3">{postMessage}</p>
             <div className="relative w-full h-60 md:h-80">
               <Image
-                src={`${postImageUrl}`}
+                src={postImageUrl}
                 alt="Post Picture"
                 fill
                 className="object-cover rounded-b-lg"
               />
             </div>
           </div>
-          
         </div>
       </div>
     </div>
