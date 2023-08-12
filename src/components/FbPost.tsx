@@ -6,7 +6,7 @@ import { FbPostInterface } from "@/interface/FbPostInterface";
 import {
   latestPostRequestEndpoint,
   pageRequestEndpoint,
-} from "@/constants/FbApiEndpoints";
+} from "@/constants/LocalApiEndpoints";
 
 const fetchFbData = async () => {
   const pageRequest = await fetch(pageRequestEndpoint);

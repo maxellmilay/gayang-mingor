@@ -4,17 +4,17 @@ import {
   FbPageImageDataInterface,
   FbPageInterface,
 } from "@/interface/FbPageInterface";
+import {
+  fbPageImageRequestEndpoint,
+  fbPageRequestEndpoint,
+} from "@/constants/FbApiEndpoints";
 
 export async function GET() {
-  const pageRequest = await fetch(
-    `https://graph.facebook.com/gayangmingor?access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
-  );
+  const pageRequest = await fetch(fbPageRequestEndpoint);
 
   const pageData: FbPageDataInterface = await pageRequest.json();
 
-  const imageUrlRequest = await fetch(
-    "https://graph.facebook.com/gayangmingor/picture?redirect=0",
-  );
+  const imageUrlRequest = await fetch(fbPageImageRequestEndpoint);
 
   const imageData: FbPageImageDataInterface = await imageUrlRequest.json();
 

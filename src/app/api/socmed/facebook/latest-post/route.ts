@@ -1,3 +1,4 @@
+import { fbPostRequestEndpoint } from "@/constants/FbApiEndpoints";
 import {
   FbPostDataInterface,
   FbPostImageDataInterface,
@@ -6,14 +7,12 @@ import {
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const fbPostRequest = await fetch(
-    `https://graph.facebook.com/gayangmingor/feed?access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
-  );
+  const fbPostRequest = await fetch(fbPostRequestEndpoint);
 
   const fbPostData: FbPostDataInterface = await fbPostRequest.json();
 
   const imageRequest = await fetch(
-    `https://graph.facebook.com/${fbPostData.data[0].id}?fields=full_picture&access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
+    `https://graph.facebook.com/${fbPostData.data[0 ].id}?fields=full_picture&access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
   );
 
   const imageData: FbPostImageDataInterface = await imageRequest.json();
