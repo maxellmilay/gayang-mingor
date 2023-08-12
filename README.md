@@ -18,6 +18,8 @@ node server.js
 
 This runs the custom server file `server.js` in the root directory that can only be accessed during development
 
+The site is now hosted locally for development at: [https://localhost:3001](https://localhost:3001)
+
 ## Getting Started (HTTP)
 
 First, run the development server:
