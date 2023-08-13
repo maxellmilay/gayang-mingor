@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <>
       <div className="flex flex-col justify-end bg-contact-header h-[9rem] md:h-[20rem] px-9 md:px-20 py-4 bg-cover bg-center">
-        <h1 className="text-mingor-yellow text-4xl md:text-[5.5rem] font-bitcheese w-full md:mb-12">
+        <h1 className="text-mingor-yellow text-4xl md:text-[5.5rem] font-bitcheese md:mb-12">
           Contact Us
         </h1>
       </div>
