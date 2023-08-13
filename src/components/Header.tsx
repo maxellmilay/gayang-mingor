@@ -48,7 +48,7 @@ const Header = () => {
         </Link>
         <Link
           href={routes.CONTACT}
-          className="font-bold bg-mingor-yellow px-4 py-1 rounded-[70px] h-fit"
+          className="font-bold bg-mingor-yellow text-mingor-blue-200 px-4 py-1 rounded-[70px] h-fit"
         >
           Contact Us
         </Link>

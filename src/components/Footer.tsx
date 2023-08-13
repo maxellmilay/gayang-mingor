@@ -1,6 +1,5 @@
-import externalLinks from "@/enums/externalLinks";
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import Socials from "./Socials";
 
 const Footer = () => {
   return (
@@ -9,26 +8,8 @@ const Footer = () => {
         Lilipad at Lalaban, Gagawa ng Kasaysayan
       </p>
       <p className="text-xs mb-3">Gayang Mingor © 2023</p>
-      <div className="flex md:text-3xl">
-        <a
-          rel="noreferrer"
-          href={externalLinks.FB}
-          target="_blank"
-          className="mr-5 md:mr-10"
-        >
-          <FaFacebook />
-        </a>
-        <a
-          rel="noreferrer"
-          href={externalLinks.TWITTER}
-          target="_blank"
-          className="mr-5 md:mr-10"
-        >
-          <FaTwitter />
-        </a>
-        <a rel="noreferrer" href={externalLinks.INSTAGRAM} target="_blank">
-          <FaInstagram />
-        </a>
+      <div className="flex md:text-3xl justify-evenly w-32 md:w-40">
+        <Socials />
       </div>
     </div>
   );

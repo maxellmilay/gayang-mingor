@@ -3,7 +3,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <>
-      <div className="aspect-[1440/384] w-full relative">
+      <div className="aspect-[1000/384] md:aspect-[1440/384] w-full relative">
         <Image
           fill
           alt="header"
