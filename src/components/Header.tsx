@@ -36,7 +36,7 @@ const Header = () => {
           GAYANG MINGOR
         </p>
       </Link>
-      <div className="md:flex items-center text-white font-gotham font-light hidden ">
+      <nav className="md:flex items-center text-white font-gotham font-light hidden ">
         <Link href={routes.ABOUT} className="mr-6">
           About Us
         </Link>
@@ -52,7 +52,7 @@ const Header = () => {
         >
           Contact Us
         </Link>
-      </div>
+      </nav>
       <div className="flex items-center md:hidden">
         <button className="h-fit" onClick={handleDropdownClick}>
           <Image
