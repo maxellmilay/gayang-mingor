@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Dropdown from "./Dropdown";
+import Link from "next/link";
+import routes from "@/enums/routes";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -16,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="flex fixed z-10 w-screen px-7 py-4 bg-mingor-blue/40 justify-between backdrop-blur-[10px] header-box-shadow bg-center">
-      <button className="flex items-center">
+      <Link href={routes.HOME} className="flex items-center">
         <Image
           src="/images/gayang-mingor-logo.png"
           width={35}
@@ -27,14 +29,23 @@ const Header = () => {
         <p className="font-gotham font-bold md:mx-5 text-white text-left">
           GAYANG MINGOR
         </p>
-      </button>
+      </Link>
       <div className="md:flex items-center text-white font-gotham font-light hidden ">
-        <button className="mr-6">About Us</button>
-        <button className="mr-6">Member Directory</button>
-        <button className="mr-6">Timeline</button>
-        <button className="font-bold bg-mingor-yellow px-4 py-1 rounded-[70px] h-fit">
+        <Link href={routes.ABOUT} className="mr-6">
+          About Us
+        </Link>
+        <Link href={routes.MEMBERS} className="mr-6">
+          Member Directory
+        </Link>
+        <Link href={routes.TIMELINE} className="mr-6">
+          Timeline
+        </Link>
+        <Link
+          href={routes.CONTACT}
+          className="font-bold bg-mingor-yellow px-4 py-1 rounded-[70px] h-fit"
+        >
           Contact Us
-        </button>
+        </Link>
       </div>
       <div className="flex items-center md:hidden">
         <button className="h-fit" onClick={handleDropdownClick}>

@@ -1,3 +1,4 @@
+import externalLinks from "@/enums/externalLinks";
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
@@ -9,15 +10,19 @@ const Footer = () => {
       </p>
       <p className="text-xs mb-3">Gayang Mingor © 2023</p>
       <div className="flex md:text-3xl">
-        <button className="mr-5 md:mr-10">
+        <a href={externalLinks.FB} target="_blank" className="mr-5 md:mr-10">
           <FaFacebook />
-        </button>
-        <button className="mr-5 md:mr-10">
+        </a>
+        <a
+          href={externalLinks.TWITTER}
+          target="_blank"
+          className="mr-5 md:mr-10"
+        >
           <FaTwitter />
-        </button>
-        <button>
+        </a>
+        <a href={externalLinks.INSTAGRAM} target="_blank">
           <FaInstagram />
-        </button>
+        </a>
       </div>
     </div>
   );
