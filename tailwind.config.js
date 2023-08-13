@@ -17,6 +17,7 @@ module.exports = {
           100: "#14194A",
           200: "#0B124F",
         },
+        "mingor-gray": "#D9D9D9",
         facebook: "#242527",
       },
     },
