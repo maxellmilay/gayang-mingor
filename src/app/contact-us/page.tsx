@@ -11,13 +11,13 @@ const ContactUs = () => {
           Contact Us
         </h1>
       </div>
-      <div className="flex flex-col items-center text-mingor-blue-200 font-gotham font-bold p-7 md:p-14">
+      <div className="flex flex-col items-center text-mingor-blue-200 font-gotham font-bold p-7 md:p-14 text-center">
         <p className="text-2xl md:text-6xl mb-5 md:mb-10">Our Socials</p>
         <div className="flex justify-evenly w-72 md:w-[45rem] text-5xl md:text-[5.5rem] mb-16 md:mb-32">
           <Socials />
         </div>
-        <p className="text-2xl md:text-6xl text-center md:w-[45rem] mb-6 md:mb-10">
-          Reaching Out to an individual member?
+        <p className="text-2xl md:text-6xl md:w-[45rem] mb-6 md:mb-10">
+          Reaching out to an individual member?
         </p>
         <Link
           href={routes.MEMBERS}

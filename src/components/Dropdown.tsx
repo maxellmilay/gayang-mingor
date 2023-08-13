@@ -1,5 +1,4 @@
 import React from "react";
-import { FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import routes from "@/enums/routes";
