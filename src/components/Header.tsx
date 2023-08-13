@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex fixed z-10 w-screen px-7 py-4 bg-mingor-blue/40 justify-between backdrop-blur-[10px] header-box-shadow bg-center">
+    <header className="flex fixed z-10 w-screen px-7 py-4 bg-mingor-blue-100/40 justify-between backdrop-blur-[10px] header-box-shadow bg-center">
       <Link href={routes.HOME} className="flex items-center">
         <Image
           src="/images/gayang-mingor-logo.png"

@@ -13,8 +13,10 @@ module.exports = {
       },
       colors: {
         "mingor-yellow": "#E9C717",
-        "mingor-blue": "#14194A",
-        "mingor-blue-2": "#0B124F",
+        "mingor-blue": {
+          100: "#14194A",
+          200: "#0B124F",
+        },
         facebook: "#242527",
       },
     },

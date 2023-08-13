@@ -10,7 +10,7 @@ const Dropdown = (props: PropsInterface) => {
   const { closeDropdownClick } = props;
 
   return (
-    <div className="flex flex-col fixed top-0 left-0 w-screen h-screen bg-mingor-blue">
+    <div className="flex flex-col fixed top-0 left-0 w-screen h-screen bg-mingor-blue-100">
       <div className="flex justify-end px-7 py-4">
         <button
           className="flex w-[30px] h-[30px] justify-center items-center"
