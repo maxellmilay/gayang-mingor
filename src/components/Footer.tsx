@@ -10,17 +10,23 @@ const Footer = () => {
       </p>
       <p className="text-xs mb-3">Gayang Mingor © 2023</p>
       <div className="flex md:text-3xl">
-        <a href={externalLinks.FB} target="_blank" className="mr-5 md:mr-10">
+        <a
+          rel="noreferrer"
+          href={externalLinks.FB}
+          target="_blank"
+          className="mr-5 md:mr-10"
+        >
           <FaFacebook />
         </a>
         <a
+          rel="noreferrer"
           href={externalLinks.TWITTER}
           target="_blank"
           className="mr-5 md:mr-10"
         >
           <FaTwitter />
         </a>
-        <a href={externalLinks.INSTAGRAM} target="_blank">
+        <a rel="noreferrer" href={externalLinks.INSTAGRAM} target="_blank">
           <FaInstagram />
         </a>
       </div>

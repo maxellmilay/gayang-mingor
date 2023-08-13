@@ -29,13 +29,13 @@ const HomePage = () => {
         <div className="flex flex-col">
           <p className="font-bold text-5xl text-black">Follow Us!</p>
           <div className="flex text-mingor-blue-2 text-[6rem] items-center justify-around grow px-5">
-            <a href={externalLinks.FB} target="_blank">
+            <a rel="noreferrer" href={externalLinks.FB} target="_blank">
               <FaFacebook />
             </a>
-            <a href={externalLinks.TWITTER} target="_blank">
+            <a rel="noreferrer" href={externalLinks.TWITTER} target="_blank">
               <FaTwitter />
             </a>
-            <a href={externalLinks.INSTAGRAM} target="_blank">
+            <a rel="noreferrer" href={externalLinks.INSTAGRAM} target="_blank">
               <FaInstagram />
             </a>
           </div>
@@ -45,6 +45,7 @@ const HomePage = () => {
             </p>
             <a
               href={externalLinks.PALANCA}
+              rel="noreferrer"
               target="_blank"
               className="text-white bg-mingor-blue-2 px-10 py-2 text-2xl w-fit rounded-[50px]"
             >
