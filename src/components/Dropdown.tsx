@@ -1,6 +1,8 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
+import routes from "@/enums/routes";
 
 interface PropsInterface {
   closeDropdownClick: () => void;
@@ -28,10 +30,18 @@ const Dropdown = (props: PropsInterface) => {
       </div>
       <div className="flex justify-end px-7 py-4">
         <div className="flex flex-col font-gotham font-thin text-white text-xl">
-          <button className="text-right mb-5">About Us</button>
-          <button className="text-right mb-5">Member Directory</button>
-          <button className="text-right mb-5">Timeline</button>
-          <button className="text-right">Contact Us</button>
+          <Link href={routes.ABOUT} className="text-right mb-5">
+            About Us
+          </Link>
+          <Link href={routes.MEMBERS} className="text-right mb-5">
+            Member Directory
+          </Link>
+          <Link href={routes.TIMELINE} className="text-right mb-5">
+            Timeline
+          </Link>
+          <Link href={routes.CONTACT} className="text-right">
+            Contact Us
+          </Link>
         </div>
         <div className="flex w-[30px] justify-center">
           <div className="border border-r border-white h-auto" />

@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Dropdown from "./Dropdown";
 import Link from "next/link";
 import routes from "@/enums/routes";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdownClick = () => {
@@ -15,6 +17,10 @@ const Header = () => {
   const closeDropdownClick = () => {
     setIsDropdownOpen(false);
   };
+
+  useEffect(() => {
+    closeDropdownClick();
+  }, [pathname]);
 
   return (
     <header className="flex fixed z-10 w-screen px-7 py-4 bg-mingor-blue-100/40 justify-between backdrop-blur-[10px] header-box-shadow bg-center">
