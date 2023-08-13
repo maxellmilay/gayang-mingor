@@ -1,6 +1,5 @@
 import FbPost from "@/components/FbPost";
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import externalLinks from "@/enums/externalLinks";
 import Socials from "@/components/Socials";
