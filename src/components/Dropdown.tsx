@@ -28,7 +28,7 @@ const Dropdown = (props: PropsInterface) => {
         </button>
       </div>
       <div className="flex justify-end px-7 py-4">
-        <div className="flex flex-col font-gotham font-thin text-white text-xl">
+        <nav className="flex flex-col font-gotham font-thin text-white text-xl">
           <Link href={routes.ABOUT} className="text-right mb-5">
             About Us
           </Link>
@@ -41,7 +41,7 @@ const Dropdown = (props: PropsInterface) => {
           <Link href={routes.CONTACT} className="text-right">
             Contact Us
           </Link>
-        </div>
+        </nav>
         <div className="flex w-[30px] justify-center">
           <div className="border border-r border-white h-auto" />
         </div>
