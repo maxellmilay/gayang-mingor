@@ -18,9 +18,8 @@ const About = () => {
             Who We Are
           </h2>
           <p className="text-sm md:text-lg lg:text-3xl my-2 sm:my-4 md:my-6 lg:my-8">
-            We are Gayang Mingor, the Batch 2022 of Philippine Science High
-            School - Central Visayas Campus - 90 members of the premiere high
-            school in Asia.
+            We are Gayang Mingor, 90 students from Batch 2022 of Philippine
+            Science High School - Central Visayas Campus
           </p>
           <div className="w-full aspect-[1157/572] relative">
             <Image fill alt="Frozen Musical - 2018" src="/images/frozen.png" />
