@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const NotFound = () => {
   return (
     <body
-      className={`flex flex-col min-h-screen scrollbar-thumb-mingor-blue-200 scrollbar-track-mingor-blue-100/70 scrollbar-thin`}
+      className={`flex flex-col min-h-[100dvh] scrollbar-thumb-mingor-blue-200 scrollbar-track-mingor-blue-100/70 scrollbar-thin`}
     >
       <Header />
       <main className="flex flex-col grow basis-0 items-center justify-center h-full mt-[3.6rem] md:mt-[4.75rem] text-black font-gotham px-10 text-center">
