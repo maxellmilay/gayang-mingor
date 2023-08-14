@@ -11,8 +11,10 @@ export async function GET() {
 
   const fbPostData: FbPostDataInterface = await fbPostRequest.json();
 
+  const postID = fbPostData.data[0].id;
+
   const imageRequest = await fetch(
-    `https://graph.facebook.com/${fbPostData.data[0 ].id}?fields=full_picture&access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
+    `https://graph.facebook.com/${postID}?fields=full_picture&access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
   );
 
   const imageData: FbPostImageDataInterface = await imageRequest.json();
@@ -20,6 +22,7 @@ export async function GET() {
   const post: FbPostInterface = {
     message: fbPostData.data[0].message,
     imageUrl: imageData.full_picture,
+    id: postID,
   };
 
   return NextResponse.json(post);

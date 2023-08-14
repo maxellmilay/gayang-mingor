@@ -20,15 +20,28 @@ const fetchFbData = async () => {
     pageImageUrl: pageData.imageUrl,
     postMessage: latestPostData.message,
     postImageUrl: latestPostData.imageUrl,
+    postID: latestPostData.id,
   };
 };
 
 const FbPost = async () => {
-  const { pageName, pageImageUrl, postMessage, postImageUrl }: FbDataInterface =
-    await fetchFbData();
+  const {
+    pageName,
+    pageImageUrl,
+    postMessage,
+    postImageUrl,
+    postID,
+  }: FbDataInterface = await fetchFbData();
+
+  const fbPostLink = `https://facebook.com/${postID}`;
 
   return (
-    <div className="flex flex-col bg-mingor-gray-200 rounded-lg pt-4 text-white w-72 md:w-[350px]">
+    <a
+      href={fbPostLink}
+      target="_blank"
+      rel="noreferrer"
+      className="flex flex-col bg-mingor-gray-200 rounded-lg pt-4 text-white w-72 md:w-[350px]"
+    >
       <div className="flex items-center px-4 mb-3">
         <div className="relative w-[35px] h-[35px] md:w-[45px] md:h-[45px]">
           <Image
@@ -49,7 +62,7 @@ const FbPost = async () => {
           className="object-cover rounded-b-lg"
         />
       </div>
-    </div>
+    </a>
   );
 };
 

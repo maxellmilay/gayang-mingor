@@ -8,7 +8,7 @@ import FbPostLoading from "@/components/Loading/FbPost";
 const HomePage = () => {
   return (
     <>
-      <div className="flex flex-col justify-end bg-cover bg-center bg-mobile-landing md:bg-landing w-full h-screen font-gotham px-7 md:px-10">
+      <section className="flex flex-col justify-end bg-cover bg-center bg-mobile-landing md:bg-landing w-full h-screen font-gotham px-7 md:px-10">
         <p className="text-2xl md:text-[5rem] md:leading-[6rem] text-white mb-4 md:mb-0">
           Lilipad at Lalaban
         </p>
@@ -21,8 +21,8 @@ const HomePage = () => {
         >
           About Us
         </Link>
-      </div>
-      <div className="flex flex-col md:flex-row font-gotham text-mingor-blue-200 bg-white p-7 md:p-10">
+      </section>
+      <section className="flex flex-col md:flex-row font-gotham text-mingor-blue-200 bg-white p-7 md:p-10">
         <div className="flex flex-col md:mr-14 mb-5 md:mb-0 items-center md:items-start">
           <p className="font-bold text-2xl md:text-5xl mb-5">Latest Post</p>
           <Suspense fallback={<FbPostLoading />}>
@@ -50,7 +50,7 @@ const HomePage = () => {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

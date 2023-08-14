@@ -14,4 +14,5 @@ export interface FbPostImageDataInterface {
 export interface FbPostInterface {
   message: string;
   imageUrl: string;
+  id: string;
 }
