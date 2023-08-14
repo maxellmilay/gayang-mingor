@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import externalLinks from "@/enums/externalLinks";
 
 interface ContactUsProps {}
 
@@ -16,26 +17,29 @@ function ContactUs({}: ContactUsProps) {
           unoptimized={true}
         />
       </div>
-      <div className="flex justify-center my-10">
-        <div className="w-1/2 flex flex-col items-center sm:text-xl md:text-2xl lg:text-5xl text-mingor-blue-100 font-bold gap-16">
+      <div className="flex flex-col items-center my-10 lg:my-16">
+        <div className="w-3/4 flex flex-col items-center text-2xl md:text-3xl lg:text-5xl text-mingor-blue-100 font-bold gap-8 lg:gap-16 text-center">
           <h2>Our Socials</h2>
-          <div className="flex justify-around w-full sm:text-2xl md:text-3xl lg:text-6xl">
-            <Link href={"https://www.facebook.com"}>
+          <div className="flex justify-around w-full text-6xl md:text-7xl lg:text-8xl">
+            <Link href={externalLinks.FB}>
               <FaFacebook />
             </Link>
-            <Link href={"https://www.twitter.com"}>
+            <Link href={externalLinks.TWITTER}>
               <FaTwitter />
             </Link>
-            <Link href={"https://www.instagram.com"}>
+            <Link href={externalLinks.INSTAGRAM}>
               <FaInstagram />
             </Link>
           </div>
-          <h3 className="mt-20 text-center">
+          <h3 className="mt-14 lg:mt-20 text-center">
             Reaching out to an individual member?
           </h3>
-          <button className="bg-mingor-blue-100 text-white rounded-full py-2 px-5 text-2xl">
+          <Link
+            href={externalLinks.PALANCA}
+            className="bg-mingor-blue-100 text-white rounded-full py-1 px-5 text-base md:text-md lg:text-2xl"
+          >
             Send a message
-          </button>
+          </Link>
         </div>
       </div>
     </>
