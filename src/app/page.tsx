@@ -31,7 +31,7 @@ const fetchLatestPost = async () => {
 const HomePage = () => {
   return (
     <>
-      <section className="flex flex-col justify-end bg-cover bg-center bg-mobile-landing md:bg-landing w-full h-screen font-gotham px-7 md:px-10">
+      <section className="flex flex-col justify-end bg-cover bg-center bg-mobile-landing md:bg-landing w-full h-[100dvh] font-gotham px-7 md:px-10">
         <p className="text-2xl md:text-[5rem] md:leading-[6rem] text-white mb-4 md:mb-0">
           Lilipad at Lalaban
         </p>
