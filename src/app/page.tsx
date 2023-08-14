@@ -4,7 +4,7 @@ import Link from "next/link";
 import externalLinks from "@/enums/externalLinks";
 import Socials from "@/components/Socials";
 import FbPostLoading from "../components/Loading/FbPost";
-import { fbPostRequestEndpoint } from "@/constants/fbApiEndpoints";
+import { fbPostRequestEndpoint } from "@/constants/FbApiEndpoints";
 import { FbPostDataInterface } from "@/interface/FbPostInterface";
 import { FbPostImageDataInterface } from "@/interface/FbPostInterface";
 

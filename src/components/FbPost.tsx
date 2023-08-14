@@ -13,7 +13,7 @@ import {
   fbPostRequestEndpoint,
   fbPageRequestEndpoint,
   fbPageImageRequestEndpoint,
-} from "@/constants/fbApiEndpoints";
+} from "@/constants/FbApiEndpoints";
 import { revalidationInterval } from "@/constants/revalidation";
 
 const fetchPageData = async () => {
