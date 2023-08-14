@@ -3,4 +3,5 @@ export interface FbDataInterface {
   pageImageUrl: string;
   postMessage: string;
   postImageUrl: string;
+  postID: string;
 }
