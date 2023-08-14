@@ -10,6 +10,7 @@ module.exports = {
         footer: "url('/images/footer-bg.png')",
         landing: "url('/images/landing-bg.png')",
         "mobile-landing": "url('/images/mobile-landing-bg.png')",
+        "contact-header": "url('/images/contact-header.png')",
       },
       colors: {
         "mingor-yellow": "#E9C717",
@@ -17,8 +18,10 @@ module.exports = {
           100: "#14194A",
           200: "#0B124F",
         },
-        "mingor-gray": "#D9D9D9",
-        facebook: "#242527",
+        "mingor-gray": {
+          100: "#D9D9D9",
+          200: "#242527",
+        },
       },
     },
   },

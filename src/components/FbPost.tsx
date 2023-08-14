@@ -28,7 +28,7 @@ const FbPost = async () => {
     await fetchFbData();
 
   return (
-    <div className="flex flex-col bg-facebook rounded-lg pt-4 text-white w-60 md:w-80">
+    <div className="flex flex-col bg-mingor-gray-200 rounded-lg pt-4 text-white w-60 md:w-80">
       <div className="flex items-center px-4 mb-3">
         <div className="relative w-[25px] h-[25px] md:w-[30px] md:h-[30px]">
           <Image

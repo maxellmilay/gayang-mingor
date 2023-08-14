@@ -1,12 +1,12 @@
 import FbPost from "@/components/FbPost";
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import externalLinks from "@/enums/externalLinks";
+import Socials from "@/components/Socials";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col">
+    <>
       <div className="flex flex-col justify-end bg-cover bg-center bg-mobile-landing md:bg-landing w-full h-screen font-gotham px-7 md:px-10">
         <p className="text-2xl md:text-[5rem] md:leading-[6rem] text-white mb-4 md:mb-0">
           Lilipad at Lalaban
@@ -30,18 +30,10 @@ const HomePage = () => {
           <p className="font-bold text-2xl md:text-5xl mb-3 md:mb-0 text-black">
             Follow Us!
           </p>
-          <div className="flex w-full text-mingor-blue-200 text-4xl md:text-[6rem] items-center justify-around mb-5 md:mb-0 md:grow px-5">
-            <a rel="noreferrer" href={externalLinks.FB} target="_blank">
-              <FaFacebook />
-            </a>
-            <a rel="noreferrer" href={externalLinks.TWITTER} target="_blank">
-              <FaTwitter />
-            </a>
-            <a rel="noreferrer" href={externalLinks.INSTAGRAM} target="_blank">
-              <FaInstagram />
-            </a>
+          <div className="flex w-44 md:w-full text-mingor-blue-200 text-4xl md:text-[6rem] items-center justify-evenly mb-5 md:mb-0 md:grow md:px-5">
+            <Socials />
           </div>
-          <div className="flex flex-col items-center justify-evenly font-bold bg-mingor-gray rounded-[30px] md:h-1/2 px-10 py-5 md:px-10 md:py-0">
+          <div className="flex flex-col items-center justify-evenly font-bold bg-mingor-gray-100 rounded-[30px] md:h-1/2 px-10 py-5 md:px-10 md:py-0">
             <p className="text-mingor-blue-200 mb-5 md:mb-0 text-lg md:text-6xl text-center">
               Send us a message!
             </p>
@@ -56,7 +48,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

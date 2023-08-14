@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${inter.className} flex flex-col min-h-screen scrollbar-thumb-mingor-blue-200 scrollbar-track-mingor-blue-100/70 scrollbar-thin`}
       >
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex flex-col grow basis-0">{children}</main>
         <Footer />
       </body>
     </html>
