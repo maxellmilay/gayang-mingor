@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+};
 
 const About = () => {
   return (
     <>
-      <div className="h-[9rem] md:h-[20rem] px-9 md:px-20 py-4 relative flex flex-col justify-end">
+      <section className="h-[9rem] md:h-[20rem] px-9 md:px-20 py-4 relative flex flex-col justify-end">
         <Image
           fill
           alt="header"
@@ -14,7 +19,7 @@ const About = () => {
         <h1 className="text-mingor-yellow text-4xl md:text-[5.5rem] font-bitcheese md:mb-12 relative">
           About Us
         </h1>
-      </div>
+      </section>
       <div className="px-8 sm:px-16 md:px-28 lg:px-36 py-8 md:py-14 lg:py-20 font-gotham text-justify">
         <section>
           <h2 className="font-bold text-base sm:text-xl md:text-2xl lg:text-5xl">
