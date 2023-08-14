@@ -2,6 +2,11 @@ import routes from "@/enums/routes";
 import React from "react";
 import Link from "next/link";
 import Socials from "@/components/Socials";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+};
 
 const ContactUs = () => {
   return (

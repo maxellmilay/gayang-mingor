@@ -4,6 +4,11 @@ import routes from "@/enums/routes";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404",
+};
 
 const NotFound = () => {
   return (
