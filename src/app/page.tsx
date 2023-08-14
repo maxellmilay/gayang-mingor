@@ -1,8 +1,9 @@
 import FbPost from "@/components/FbPost";
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import externalLinks from "@/enums/externalLinks";
 import Socials from "@/components/Socials";
+import FbPostLoading from "@/components/Loading/FbPost";
 
 const HomePage = () => {
   return (
@@ -22,28 +23,30 @@ const HomePage = () => {
         </Link>
       </div>
       <div className="flex flex-col md:flex-row font-gotham text-mingor-blue-200 bg-white p-7 md:p-10">
-        <div className="flex flex-col md:mr-20 mb-5 md:mb-0 items-center md:items-start">
+        <div className="flex flex-col md:mr-14 mb-5 md:mb-0 items-center md:items-start">
           <p className="font-bold text-2xl md:text-5xl mb-5">Latest Post</p>
-          <FbPost />
+          <Suspense fallback={<FbPostLoading />}>
+            <FbPost />
+          </Suspense>
         </div>
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start flex-1">
           <p className="font-bold text-2xl md:text-5xl mb-3 md:mb-0 text-black">
             Follow Us!
           </p>
-          <div className="flex w-44 md:w-full text-mingor-blue-200 text-4xl md:text-[6rem] items-center justify-evenly mb-5 md:mb-0 md:grow md:px-5">
+          <div className="flex w-44 md:w-full text-mingor-blue-200 text-4xl md:text-[5rem] lg:text-[6rem] items-center justify-evenly mb-5 md:mb-0 md:grow md:px-5">
             <Socials />
           </div>
-          <div className="flex flex-col items-center justify-evenly font-bold bg-mingor-gray-100 rounded-[30px] md:h-1/2 px-10 py-5 md:px-10 md:py-0">
-            <p className="text-mingor-blue-200 mb-5 md:mb-0 text-lg md:text-6xl text-center">
+          <div className="flex flex-col items-center justify-evenly font-bold bg-mingor-gray-100 rounded-[30px] md:h-1/2 px-10 py-5 md:px-10 md:py-0 w-72 md:w-full">
+            <p className="text-mingor-blue-200 mb-5 md:mb-0 text-lg md:text-[2.7rem] lg:text-6xl text-center">
               Send us a message!
             </p>
             <a
               href={externalLinks.PALANCA}
               rel="noreferrer"
               target="_blank"
-              className="text-white bg-mingor-blue-200 px-10 py-2 text-sm md:text-2xl w-fit rounded-[50px]"
+              className="text-white bg-mingor-blue-200 px-10 py-2 text-sm md:text-xl lg:text-2xl w-fit rounded-[50px]"
             >
-              Palance Site
+              Palanca Site
             </a>
           </div>
         </div>
