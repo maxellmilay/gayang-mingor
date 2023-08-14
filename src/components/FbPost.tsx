@@ -13,13 +13,18 @@ import {
   fbPostRequestEndpoint,
   fbPageRequestEndpoint,
   fbPageImageRequestEndpoint,
-} from "@/constants/FbApiEndpoints";
+} from "@/constants/fbApiEndpoints";
+import { revalidationInterval } from "@/constants/revalidation";
 
 const fetchPageData = async () => {
-  const pageRequest = await fetch(fbPageRequestEndpoint);
+  const pageRequest = await fetch(fbPageRequestEndpoint, {
+    next: { revalidate: revalidationInterval },
+  });
   const pageData: FbPageDataInterface = await pageRequest.json();
 
-  const imageUrlRequest = await fetch(fbPageImageRequestEndpoint);
+  const imageUrlRequest = await fetch(fbPageImageRequestEndpoint, {
+    next: { revalidate: revalidationInterval },
+  });
   const imageData: FbPageImageDataInterface = await imageUrlRequest.json();
 
   return {
@@ -29,12 +34,17 @@ const fetchPageData = async () => {
 };
 
 const fetchLatestPost = async () => {
-  const fbPostRequest = await fetch(fbPostRequestEndpoint);
+  const fbPostRequest = await fetch(fbPostRequestEndpoint, {
+    next: { revalidate: revalidationInterval },
+  });
   const fbPostData: FbPostDataInterface = await fbPostRequest.json();
   const postID = fbPostData.data[0].id;
 
   const imageRequest = await fetch(
     `https://graph.facebook.com/${postID}?fields=full_picture&access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
+    {
+      next: { revalidate: revalidationInterval },
+    },
   );
   const imageData: FbPostImageDataInterface = await imageRequest.json();
 
