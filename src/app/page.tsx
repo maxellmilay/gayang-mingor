@@ -1,9 +1,32 @@
-import FbPost from "./components/FbPost";
+import FbPost from "@/components/FbPost";
 import React, { Suspense } from "react";
 import Link from "next/link";
 import externalLinks from "@/enums/externalLinks";
-import Socials from "./components/Socials";
-import FbPostLoading from "./components/Loading/FbPost";
+import Socials from "@/components/Socials";
+import FbPostLoading from "../components/Loading/FbPost";
+import { fbPostRequestEndpoint } from "@/constants/FbApiEndpoints";
+import { FbPostDataInterface } from "@/interface/FbPostInterface";
+import { FbPostImageDataInterface } from "@/interface/FbPostInterface";
+
+const fetchLatestPost = async () => {
+  const fbPostRequest = await fetch(fbPostRequestEndpoint);
+
+  const fbPostData: FbPostDataInterface = await fbPostRequest.json();
+
+  const postID = fbPostData.data[0].id;
+
+  const imageRequest = await fetch(
+    `https://graph.facebook.com/${postID}?fields=full_picture&access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
+  );
+
+  const imageData: FbPostImageDataInterface = await imageRequest.json();
+
+  return {
+    message: fbPostData.data[0].message,
+    imageUrl: imageData.full_picture,
+    id: postID,
+  };
+};
 
 const HomePage = () => {
   return (
