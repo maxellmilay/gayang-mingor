@@ -1,19 +1,53 @@
 import React from "react";
 import Image from "next/image";
 import { FbDataInterface } from "@/interface/FbDataInterface";
-import { FbPageInterface } from "@/interface/FbPageInterface";
-import { FbPostInterface } from "@/interface/FbPostInterface";
 import {
-  latestPostRequestEndpoint,
-  pageRequestEndpoint,
-} from "@/constants/LocalApiEndpoints";
+  FbPageDataInterface,
+  FbPageImageDataInterface,
+} from "@/interface/FbPageInterface";
+import {
+  FbPostDataInterface,
+  FbPostImageDataInterface,
+} from "@/interface/FbPostInterface";
+import {
+  fbPostRequestEndpoint,
+  fbPageRequestEndpoint,
+  fbPageImageRequestEndpoint,
+} from "@/constants/FbApiEndpoints";
+
+const fetchPageData = async () => {
+  const pageRequest = await fetch(fbPageRequestEndpoint);
+  const pageData: FbPageDataInterface = await pageRequest.json();
+
+  const imageUrlRequest = await fetch(fbPageImageRequestEndpoint);
+  const imageData: FbPageImageDataInterface = await imageUrlRequest.json();
+
+  return {
+    name: pageData.name,
+    imageUrl: imageData.data.url,
+  };
+};
+
+const fetchLatestPost = async () => {
+  const fbPostRequest = await fetch(fbPostRequestEndpoint);
+  const fbPostData: FbPostDataInterface = await fbPostRequest.json();
+  const postID = fbPostData.data[0].id;
+
+  const imageRequest = await fetch(
+    `https://graph.facebook.com/${postID}?fields=full_picture&access_token=${process.env.FB_PAGE_ACCESS_TOKEN}`,
+  );
+  const imageData: FbPostImageDataInterface = await imageRequest.json();
+
+  return {
+    message: fbPostData.data[0].message,
+    imageUrl: imageData.full_picture,
+    id: postID,
+  };
+};
 
 const fetchFbData = async () => {
-  const pageRequest = await fetch(pageRequestEndpoint);
-  const pageData: FbPageInterface = await pageRequest.json();
-
-  const latestPostRequest = await fetch(latestPostRequestEndpoint);
-  const latestPostData: FbPostInterface = await latestPostRequest.json();
+  const pageData = await fetchPageData();
+  const latestPostData = await fetchLatestPost();
 
   return {
     pageName: pageData.name,
